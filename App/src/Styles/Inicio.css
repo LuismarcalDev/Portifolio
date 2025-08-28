@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 69px);
+  text-align: center;
+}
+
+.Main h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 55px;
+}
+
+.Main h4 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 25px;
+}
+
+.Main h4 span {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 23px;
+  color: rgb(105, 255, 230);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .Main h1 {
+    font-size: 32px;
+  }
+
+  .Main h4 {
+    font-size: 18px;
+  }
+
+  .Main h4 span {
+    font-size: 16px;
+  }
+}

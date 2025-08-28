@@ -1,0 +1,164 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent; 
+  color: white;
+  position: relative;
+}
+
+
+.icon h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+
+.menu {
+  display: flex;
+  gap: 30px;
+  font-size: 22px;
+  align-items: center;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  left: 50px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: rgba(255, 255, 255, 0.815);
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+
+.contato {
+  background-color: transparent;
+  border: 2px #ffffffb6 solid;
+  padding: 5px 18px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.contato:hover {
+  background-color: transparent;
+  border: 2px rgba(255, 255, 255, 0.712) solid;
+  color: #ffffffde;
+}
+
+
+.hamburguer-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburguer-btn span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: 1px;
+}
+
+
+.hamburguer-btn.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburguer-btn.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.hamburguer-btn.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.icon h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  animation: pulsar 2s ease-in-out infinite;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes pulsar {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    text-shadow: 0 0 18px rgba(255, 255, 255, 1);
+  }
+}
+
+.icon h2 {
+  animation: pulsar 3s ease-in-out infinite;
+}
+
+
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+    gap: 20px;
+    position: absolute;
+  }
+
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 15px;
+    align-items: flex-start;
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .menu a {
+    font-size: 18px;
+    color: white;
+    left: 0;
+  }
+
+  .contato {
+    display: none;
+  }
+
+  .hamburguer-btn {
+    display: flex;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    
+  }
+}

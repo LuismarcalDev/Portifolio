@@ -1,0 +1,105 @@
+.Projetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}
+.Projetos h2{
+      font-family: "poppins";
+    font-weight: 500;
+    font-size: 27px;
+}
+.projetosGeral{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.projetos-Container{
+    width: 420px;
+    height: 400px;
+  padding-right: 10px;
+  padding-left: 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+}
+.projetos-Container img{
+width: 380px;
+cursor: pointer;
+
+}
+.projetos-Container img:hover{
+
+cursor: pointer;
+ filter: brightness(90%); 
+ transition: 500ms;
+}
+
+.description{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#title-project{
+    font-family: "poppins";
+}
+.description p{
+   background-color: rgba(25, 228, 214, 0.651);
+   padding: 5px;border-radius: 10px;
+   color: white;
+   text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.425);
+   font-family: "poppins";
+   font-size: 11px;
+   font-weight: 500;
+   position: relative;
+   top: 10px;
+   cursor: pointer;
+}
+.description p:hover{
+   background-color: rgba(25, 228, 214, 0.833);
+   padding: 5px;border-radius: 10px;
+   color: rgba(255, 255, 255, 0.704);
+   text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.425);
+   font-family: "poppins";
+   font-size: 12px;
+   font-weight: 500;
+   position: relative;
+   top: 10px;
+   cursor: pointer;
+   transition: 500ms;
+}
+
+#celular{
+    width: 110px;
+}
+
+#sdd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     font-family: "poppins";
+     font-size: 15px;
+     gap: 5px;
+     margin-top: 10px;
+}
+#sdd img{
+    width: 25px;
+
+}
+
+@media (max-width: 768px){
+    .Projetos h2{
+        font-size: 25px;
+    }
+    .projetosGeral{
+        flex-direction: column;
+    }
+    .projetos-Container img{
+width: 330px;
+}
+
+}

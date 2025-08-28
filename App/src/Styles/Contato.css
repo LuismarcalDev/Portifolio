@@ -1,0 +1,134 @@
+.Contato{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left-conta{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Contato-geral{
+width: 900px;
+height: 600px;
+background-color: rgba(8, 8, 8, 0.952);
+border: 1px rgba(255, 255, 255, 0.267) solid;
+border-radius: 5px;
+padding-left: 40px;
+padding-right: 40px;
+padding-top: 40px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.Contato-geral h3{
+font-family: "poppins";
+font-size: 23px;
+font-weight: 400;
+}
+.control ul{
+    list-style: none;
+
+}
+
+.cont-social ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cont-social ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: poppins;
+}
+.cont-social ul li img{
+    width: 45px;
+    cursor: pointer;
+     
+}
+.cont-social ul li img:hover{
+    width: 45px;
+    cursor: pointer;
+      filter: brightness(80%);
+      transition: 500ms;
+}
+.control li{
+    font-family: "Inter Tight", sans-serif;
+     color: rgb(239, 240, 240);
+     font-size: 20px;
+}
+.right-conta{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    left: -30px;
+}
+footer{
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+    background-color: black;
+    font-family: "poppins";
+
+}
+@media (max-width: 768px){
+  .Contato{
+    margin-top: 1320px;
+    
+    
+  }
+  .Contato-geral{
+width: 350px;
+display: flex;
+flex-direction: column;
+gap: 5px;
+align-items: center;
+height: 720px;
+  }
+  #croco{
+    width: 110%;
+    position: relative;
+    left: 4px;
+
+  }
+  .control ul li{
+    list-style: none;
+    font-size: 17px;
+}
+.Contato-geral h3{
+    font-size: 23px;
+}
+#dft{
+    font-size: 18px;
+}
+.cont-social ul li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: poppins;
+    font-size: 15px;
+
+}
+.cont-social ul li img{
+    width: 45px;
+    cursor: pointer;
+    width: 32px;
+     
+}
+.right-conta{
+left: 0px;
+top: -40px;
+}
+
+  footer{
+    padding: 5px;
+  }
+}
