@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <div ref={inicioRef}>
+      <div ref={inicioRef} className="section-container">
         <Inicio
           onInicioClick={() => scrollTo(inicioRef)}
           onSobreClick={() => scrollTo(sobreRef)}
@@ -29,10 +29,10 @@ function App() {
           onContatoClick={() => scrollTo(contatoRef)}
         />
       </div>
-      <div ref={sobreRef}><SobreMim /></div>
-      <div ref={habilidadesRef}><Habilidades /></div>
-      <div ref={projetosRef}><Projetos /></div>
-      <div ref={contatoRef}><Contato /></div>
+      <div ref={sobreRef} className="section-container"><SobreMim /></div>
+      <div ref={habilidadesRef} className="section-container"><Habilidades /></div>
+      <div ref={projetosRef} className="section-container"><Projetos /></div>
+      <div ref={contatoRef} className="section-container"><Contato /></div>
       <Footer />
     </div>
   );

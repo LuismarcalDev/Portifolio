@@ -1,0 +1,30 @@
+.section-container {
+  margin-bottom: 80px;
+  scroll-margin-top: 20px;
+}
+
+@media (min-width: 1920px) {
+  .section-container {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .section-container {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    margin-bottom: 40px;
+    scroll-margin-top: 10px;
+  }
+}
+

@@ -32,13 +32,13 @@
   text-decoration: none;
   position: relative;
   left: 50px;
-  transition: color 0.3s;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu a:hover {
   color: rgba(255, 255, 255, 0.815);
   text-decoration: none;
-  transition: color 0.5s;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -51,13 +51,15 @@
   font-size: 16px;
   cursor: pointer;
   color: white;
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contato:hover {
   background-color: transparent;
   border: 2px rgba(255, 255, 255, 0.712) solid;
   color: #ffffffde;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
 }
 
 
@@ -121,6 +123,80 @@
 }
 
 
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .Header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .menu {
+    gap: 20px;
+    font-size: 20px;
+  }
+
+  .menu a {
+    left: 30px;
+  }
+
+  .icon h2 {
+    font-size: 24px;
+  }
+}
+
+/* HD 1366x765 */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .Header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .menu {
+    gap: 25px;
+    font-size: 21px;
+  }
+
+  .menu a {
+    left: 40px;
+  }
+
+  .icon h2 {
+    font-size: 26px;
+  }
+
+  .contato {
+    padding: 6px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Desktop 1920x1080 e acima */
+@media (min-width: 1920px) {
+  .Header {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .menu {
+    gap: 40px;
+    font-size: 24px;
+  }
+
+  .menu a {
+    left: 60px;
+  }
+
+  .icon h2 {
+    font-size: 32px;
+  }
+
+  .contato {
+    padding: 8px 24px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .Header {
     flex-direction: column;

@@ -13,21 +13,26 @@ function Inicio({
 }) {
   useEffect(() => {
     ScrollReveal().reveal(".reveal", {
-      duration: 1000,
-      distance: "50px",
-      easing: "ease-in-out",
+      duration: 2000,
+      distance: "40px",
+      easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       origin: "top",
       reset: false,
+      opacity: 0,
+      scale: 0.9,
     });
   }, []);
 
   useEffect(() => {
     ScrollReveal().reveal(".reveal2", {
-      duration: 1300,
-      distance: "55px",
-      easing: "ease-in-out",
+      duration: 2200,
+      distance: "40px",
+      easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       origin: "top",
       reset: false,
+      opacity: 0,
+      scale: 0.9,
+      delay: 200,
     });
   }, []);
 

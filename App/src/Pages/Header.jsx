@@ -17,10 +17,42 @@ function Header({
       <div className="icon"><h2>{aa}</h2></div>
 
       <nav className={`menu ${menuAberto ? "ativo" : ""}`}>
-        <a href="#" onClick={onInicioClick}>Início</a>
-        <a href="#" onClick={onProjetosClick}>Projetos</a>
-        <a href="#" onClick={onHabilidadesClick}>Habilidades</a>
-        <a href="#" onClick={onSobreClick}>Sobre mim</a>
+        <a 
+          href="#" 
+          onClick={(e) => { 
+            e.preventDefault(); 
+            onInicioClick(); 
+          }}
+        >
+          Início
+        </a>
+        <a 
+          href="#" 
+          onClick={(e) => { 
+            e.preventDefault(); 
+            onProjetosClick(); 
+          }}
+        >
+          Projetos
+        </a>
+        <a 
+          href="#" 
+          onClick={(e) => { 
+            e.preventDefault(); 
+            onHabilidadesClick(); 
+          }}
+        >
+          Habilidades
+        </a>
+        <a 
+          href="#" 
+          onClick={(e) => { 
+            e.preventDefault(); 
+            onSobreClick(); 
+          }}
+        >
+          Sobre mim
+        </a>
       </nav>
 
       <button className="contato" onClick={onContatoClick}>Contato</button>

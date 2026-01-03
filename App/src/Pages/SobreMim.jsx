@@ -13,97 +13,139 @@ import { useEffect } from "react";
 function SobreMim(){
   useEffect(() => {
   ScrollReveal().reveal(".reveal01", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
     
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal02", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay: 500 // 1s depois
+    delay: 80,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal03", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay: 1000 // 1s depois
+    delay: 160,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal04", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay: 1500 // 1s depois
+    delay: 240,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal05", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay: 2000 
+    delay: 320,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
 
   useEffect(() => {
   ScrollReveal().reveal(".reveal06", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay: 2500 
+    delay: 400,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal07", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay:3000 
+    delay: 480,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
   useEffect(() => {
   ScrollReveal().reveal(".reveal08", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay:3500 
+    delay: 560,
+    distance: "15px",
+    origin: "left",
+    scale: 0.9
   });
 }, []);
 
   useEffect(() => {
   ScrollReveal().reveal(".reveal09", {
-    duration: 1000,
-    easing: "ease-in-out",
+    duration: 1600,
+    easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
     opacity: 0,
     reset: false,
-    delay:4000
-  });
-}, []);
-useEffect(() => {
-  ScrollReveal().reveal(".formacao", {
-    duration: 1000,
-    distance: "50px",
-    easing: "ease-in-out",
+    delay: 640,
+    distance: "15px",
     origin: "left",
-    reset: false,
-    delay: 500 // 1 segundo de atraso
+    scale: 0.9
   });
 }, []);
+  useEffect(() => {
+    ScrollReveal().reveal(".reveal-texto", {
+      duration: 1600,
+      easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      opacity: 0,
+      reset: false,
+      delay: 100,
+      distance: "30px",
+      origin: "bottom",
+      scale: 0.95
+    });
+  }, []);
+
+  useEffect(() => {
+    ScrollReveal().reveal(".formacao", {
+      duration: 2000,
+      distance: "40px",
+      easing: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      origin: "right",
+      reset: false,
+      delay: 300,
+      opacity: 0,
+      scale: 0.95
+    });
+  }, []);
 
    
     return(
@@ -122,15 +164,16 @@ useEffect(() => {
           <img src={wind} alt="" className="reveal09" />
         </div>
              <div className="cont-sobre">
-                <h2>Sobre Mim</h2>
-<p>Olá! Meu nome é Luis Felippe Marçal, tenho 20 anos e sou desenvolvedor Full Stack. Estudo programação há cerca de 3 anos, sempre buscando me aperfeiçoar na área.
-
-Atualmente, curso Análise e Desenvolvimento de Sistemas no Biopark Toledo (2º semestre) e, anteriormente, concluí o curso técnico em Informática integrado ao Ensino Médio, com duração de 4 anos. <br />
-Sempre fui apaixonado por tecnologia e movido pela curiosidade. Foi essa paixão que me levou a transformar a programação em profissão e hobby. Sou autodidata e estou sempre buscando conhecimento — já fiz diversos cursos nas áreas de Front-End, Back-End e Web Design.
-Com foco no desenvolvimento web, também possuo experiência em Web Design, utilizando o Figma como ferramenta principal para criação de interfaces.
-</p>
-
-
+                <h2 className="reveal-texto">Sobre Mim</h2>
+                <div className="texto-sobre">
+                    <p className="reveal-texto">Olá! Meu nome é Luis Felippe Marçal, tenho 20 anos e sou desenvolvedor Full Stack. Estudo programação há cerca de 3 anos, sempre buscando me aperfeiçoar na área.</p>
+                    
+                    <p className="reveal-texto">Atualmente, curso Análise e Desenvolvimento de Sistemas no Biopark Toledo (2º semestre) e, anteriormente, concluí o curso técnico em Informática integrado ao Ensino Médio, com duração de 4 anos.</p>
+                    
+                    <p className="reveal-texto">Sempre fui apaixonado por tecnologia e movido pela curiosidade. Foi essa paixão que me levou a transformar a programação em profissão e hobby. Sou autodidata e estou sempre buscando conhecimento — já fiz diversos cursos nas áreas de Front-End, Back-End e Web Design.</p>
+                    
+                    <p className="reveal-texto">Com foco no desenvolvimento web, também possuo experiência em Web Design, utilizando o Figma como ferramenta principal para criação de interfaces.</p>
+                </div>
             </div>
             <div className="formacao">
               <div className="title-forma">

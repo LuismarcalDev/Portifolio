@@ -3,6 +3,12 @@
     flex-direction: column;
     align-items: center;
     height: 700px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
 }
 .Projetos h2{
       font-family: "poppins";
@@ -13,68 +19,165 @@
     margin-top: 60px;
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1800px;
+    overflow: visible;
 }
 .projetos-Container{
     width: 420px;
     height: 400px;
-  padding-right: 10px;
-  padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding-top: 20px;
-    gap: 20px;
+    padding-bottom: 20px;
+    gap: 15px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-sizing: border-box;
+}
+.projetos-Container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 .projetos-Container img{
 width: 380px;
 cursor: pointer;
-
+flex-shrink: 0;
+object-fit: contain;
 }
 .projetos-Container img:hover{
 
 cursor: pointer;
  filter: brightness(90%); 
- transition: 500ms;
+ transform: scale(1.05);
+ transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .description{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 #title-project{
     font-family: "poppins";
+    margin: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .description p{
    background-color: rgba(25, 228, 214, 0.651);
-   padding: 5px;border-radius: 10px;
+   padding: 5px;
+   border-radius: 10px;
    color: white;
    text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.425);
    font-family: "poppins";
    font-size: 11px;
    font-weight: 500;
-   position: relative;
-   top: 10px;
    cursor: pointer;
+   margin: 0;
 }
 .description p:hover{
    background-color: rgba(25, 228, 214, 0.833);
-   padding: 5px;border-radius: 10px;
+   padding: 5px;
+   border-radius: 10px;
    color: rgba(255, 255, 255, 0.704);
    text-shadow: 2px 5px 15px rgba(0, 0, 0, 0.425);
    font-family: "poppins";
    font-size: 12px;
    font-weight: 500;
-   position: relative;
-   top: 10px;
    cursor: pointer;
-   transition: 500ms;
+   transform: translateY(-2px);
+   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 #celular{
     width: 110px;
+    height: auto;
+    object-fit: contain;
+}
+
+.trevo-container {
+    position: relative;
+    z-index: 10;
+}
+
+.trevo-container {
+    position: relative;
+    z-index: 1;
+}
+
+.trevo-popup {
+    position: absolute;
+    left: -280px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, rgba(8, 8, 8, 0.98) 0%, rgba(17, 17, 17, 0.98) 100%);
+    border: 2px solid rgba(105, 255, 230, 0.6);
+    border-radius: 12px;
+    padding: 15px 20px;
+    width: 260px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(105, 255, 230, 0.3);
+    z-index: 99999;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: popupSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+}
+
+.trevo-popup::before {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgba(105, 255, 230, 0.6);
+}
+
+.trevo-popup .popup-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.trevo-popup p {
+    margin: 0;
+    font-family: "poppins";
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+    text-align: left;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
 }
 
 #sdd{
@@ -91,15 +194,246 @@ cursor: pointer;
 
 }
 
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Projetos {
+        height: 800px;
+        padding-bottom: 100px;
+        margin-bottom: 60px;
+    }
+    .trevo-popup {
+        left: -250px;
+        width: 240px;
+        padding: 14px 18px;
+    }
+    .trevo-popup::before {
+        right: -8px;
+        left: auto;
+        border-left: 8px solid rgba(105, 255, 230, 0.6);
+        border-right: none;
+    }
+    .trevo-popup p {
+        font-size: 12px;
+    }
+
+    .Projetos h2 {
+        font-size: 26px;
+    }
+
+    .projetosGeral {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projetos-Container {
+        width: 350px;
+        height: 380px;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+
+    .projetos-Container img {
+        width: 320px;
+    }
+
+    #celular {
+        width: 100px;
+    }
+}
+
+/* HD 1366x765 */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .Projetos {
+        height: 750px;
+        padding-top: 40px;
+        padding-bottom: 100px;
+        margin-bottom: 70px;
+    }
+    .trevo-popup {
+        left: -260px;
+        width: 250px;
+    }
+    .trevo-popup::before {
+        right: -8px;
+        left: auto;
+        border-left: 8px solid rgba(105, 255, 230, 0.6);
+        border-right: none;
+    }
+
+    .Projetos h2 {
+        font-size: 28px;
+    }
+
+    .projetosGeral {
+        gap: 15px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .projetos-Container {
+        width: 300px;
+        height: 380px;
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        justify-content: space-between;
+    }
+
+    .projetos-Container img {
+        width: 270px;
+    }
+
+    #celular {
+        width: 95px;
+    }
+
+    #title-project {
+        font-size: 18px;
+    }
+
+    .description p {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+/* Desktop 1920x1080 e acima */
+@media (min-width: 1920px) {
+    .Projetos {
+        height: 900px;
+        padding-top: 80px;
+        padding-bottom: 120px;
+        margin-bottom: 100px;
+    }
+
+    .Projetos h2 {
+        font-size: 36px;
+    }
+
+    .projetosGeral {
+        gap: 40px;
+        margin-top: 80px;
+    }
+
+    .projetos-Container {
+        width: 500px;
+        height: 500px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        justify-content: space-between;
+    }
+
+    .projetos-Container img {
+        width: 450px;
+    }
+
+    #celular {
+        width: 140px;
+    }
+
+    #title-project {
+        font-size: 24px;
+    }
+
+    .description p {
+        font-size: 13px;
+        padding: 7px;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px){
+    .Projetos {
+        height: auto;
+        min-height: auto;
+        padding: 50px 15px;
+        padding-bottom: 200px;
+        margin-bottom: 60px;
+        overflow: visible;
+    }
     .Projetos h2{
-        font-size: 25px;
+        font-size: 22px;
+        margin-bottom: 30px;
     }
     .projetosGeral{
         flex-direction: column;
+        gap: 25px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    .projetos-Container{
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 350px;
+        padding: 20px 15px;
+        gap: 15px;
     }
     .projetos-Container img{
-width: 330px;
-}
-
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    #celular {
+        width: 100px;
+        height: auto;
+    }
+    #title-project {
+        font-size: 16px;
+        height: 25px;
+    }
+    .description {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .description p {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    .trevo-container {
+        position: relative;
+    }
+    .trevo-popup {
+        left: 50%;
+        top: auto;
+        bottom: -140px;
+        transform: translateX(-50%);
+        width: 85%;
+        max-width: 300px;
+        padding: 14px 16px;
+        z-index: 1001;
+    }
+    .trevo-popup::before {
+        left: 50%;
+        top: -8px;
+        right: auto;
+        transform: translateX(-50%);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: none;
+        border-bottom: 8px solid rgba(105, 255, 230, 0.6);
+    }
+    .trevo-popup p {
+        font-size: 12px;
+        text-align: center;
+    }
+    .trevo-popup .popup-icon {
+        width: 20px;
+        height: 20px;
+    }
+    @keyframes popupSlideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
 }
