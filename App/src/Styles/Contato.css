@@ -293,64 +293,64 @@ footer{
 /* Desktop 1920x1080 e acima */
 @media (min-width: 1920px) {
   .Contato {
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 120px;
-    min-height: 1000px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 80px;
+    min-height: 750px;
   }
 
   .Contato-geral {
-    width: 1400px;
-    max-width: 90%;
-    min-height: 750px;
-    padding: 70px 80px;
-    gap: 60px;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 580px;
+    padding: 40px 50px;
+    gap: 40px;
   }
 
   .left-conta {
-    gap: 30px;
+    gap: 20px;
     width: 45%;
   }
 
   .right-conta {
-    gap: 30px;
+    gap: 20px;
     width: 45%;
   }
 
   .Contato-geral h3 {
-    font-size: 32px;
-  }
-
-  #dft {
-    font-size: 32px;
-  }
-
-  .control ul {
-    gap: 25px;
-  }
-
-  .control li {
-    font-size: 22px;
-    padding: 15px;
-  }
-
-  .control li svg {
     font-size: 24px;
   }
 
+  #dft {
+    font-size: 24px;
+  }
+
+  .control ul {
+    gap: 18px;
+  }
+
+  .control li {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  .control li svg {
+    font-size: 18px;
+  }
+
   .cont-social ul {
-    gap: 25px;
+    gap: 18px;
   }
 
   .cont-social ul li {
-    font-size: 20px;
-    padding: 15px;
-    gap: 15px;
+    font-size: 16px;
+    padding: 10px;
+    gap: 10px;
   }
 
   .cont-social ul li img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 }
 

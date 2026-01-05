@@ -321,72 +321,72 @@
 @media (min-width: 1920px) {
     .habilidades {
         height: auto;
-        min-height: 1100px;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        min-height: 800px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .titulo-habilidades {
-        font-size: 40px;
-        margin-bottom: 50px;
+        font-size: 28px;
+        margin-bottom: 35px;
     }
 
     .cont-habili {
         width: 90%;
-        max-width: 1400px;
-        min-height: 750px;
-        padding: 60px 70px;
-        gap: 50px;
+        max-width: 1100px;
+        min-height: 600px;
+        padding: 40px 50px;
+        gap: 35px;
     }
 
     .icons {
         width: 50%;
-        gap: 40px;
-        flex-shrink: 0;
-    }
-
-    .categoria-titulo {
-        font-size: 26px;
-    }
-
-    .slaa {
-        gap: 20px;
-    }
-
-    .skill-item {
-        padding: 18px;
-    }
-
-    .skill-item img {
-        width: 65px;
-        height: 65px;
-    }
-
-    .skill-name {
-        font-size: 13px;
-    }
-
-    .aragam {
-        width: 45%;
         gap: 30px;
         flex-shrink: 0;
     }
 
+    .categoria-titulo {
+        font-size: 22px;
+    }
+
+    .slaa {
+        gap: 15px;
+    }
+
+    .skill-item {
+        padding: 12px;
+    }
+
+    .skill-item img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-name {
+        font-size: 11px;
+    }
+
+    .aragam {
+        width: 45%;
+        gap: 22px;
+        flex-shrink: 0;
+    }
+
     .estudando-titulo {
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .estudo-item {
-        padding: 18px;
+        padding: 12px;
     }
 
     .estudo-icon {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .estudo-item p {
-        font-size: 18px;
-        line-height: 1.6;
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
 

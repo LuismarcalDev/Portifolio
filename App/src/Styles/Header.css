@@ -173,26 +173,26 @@
 /* Desktop 1920x1080 e acima */
 @media (min-width: 1920px) {
   .Header {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .menu {
-    gap: 40px;
-    font-size: 24px;
+    gap: 30px;
+    font-size: 18px;
   }
 
   .menu a {
-    left: 60px;
+    left: 40px;
   }
 
   .icon h2 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .contato {
-    padding: 8px 24px;
-    font-size: 18px;
+    padding: 7px 18px;
+    font-size: 15px;
   }
 }
 

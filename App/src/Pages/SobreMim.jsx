@@ -166,9 +166,9 @@ function SobreMim(){
              <div className="cont-sobre">
                 <h2 className="reveal-texto">Sobre Mim</h2>
                 <div className="texto-sobre">
-                    <p className="reveal-texto">Olá! Meu nome é Luis Felippe Marçal, tenho 20 anos e sou desenvolvedor Full Stack. Estudo programação há cerca de 3 anos, sempre buscando me aperfeiçoar na área.</p>
+                    <p className="reveal-texto">Olá! Meu nome é Luis Felippe Marçal, tenho 21 anos e sou desenvolvedor Full Stack. Estudo programação há cerca de 4 anos, sempre buscando me aperfeiçoar na área.</p>
                     
-                    <p className="reveal-texto">Atualmente, curso Análise e Desenvolvimento de Sistemas no Biopark Toledo (2º semestre) e, anteriormente, concluí o curso técnico em Informática integrado ao Ensino Médio, com duração de 4 anos.</p>
+                    <p className="reveal-texto">Atualmente, curso Análise e Desenvolvimento de Sistemas no Biopark Toledo (3º semestre) e, anteriormente, concluí o curso técnico em Informática integrado ao Ensino Médio, com duração de 4 anos.</p>
                     
                     <p className="reveal-texto">Sempre fui apaixonado por tecnologia e movido pela curiosidade. Foi essa paixão que me levou a transformar a programação em profissão e hobby. Sou autodidata e estou sempre buscando conhecimento — já fiz diversos cursos nas áreas de Front-End, Back-End e Web Design.</p>
                     
@@ -181,7 +181,7 @@ function SobreMim(){
                   <hr />
               </div>
              <ul>
-              <ol>Análise e Desenvolvimento de Sistemas - Biopark, 2º Período</ol>
+              <ol>Análise e Desenvolvimento de Sistemas - Biopark, 3º Período</ol>
 <ol>Ensino Médio Técnico em T.I. - 4 anos, Concluído</ol>
 <ol>Estudo em Programação autodidata através de vídeos no YouTube e fóruns online</ol>
 
