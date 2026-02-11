@@ -80,14 +80,6 @@ function Habilidades(){
                                 <span className="skill-name">Ruby</span>
                             </div>
                             <div className="skill-item">
-                                <img src={c} alt="C" />
-                                <span className="skill-name">C</span>
-                            </div>
-                            <div className="skill-item">
-                                <img src={csharp} alt="C#" />
-                                <span className="skill-name">C#</span>
-                            </div>
-                            <div className="skill-item">
                                 <img src={mysql} alt="MySQL" />
                                 <span className="skill-name">MySQL</span>
                             </div>
