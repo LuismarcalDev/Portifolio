@@ -1,0 +1,68 @@
+:root {
+  --bg-base: #0a0a0a;
+  --bg-elevated: #111111;
+  --bg-card: #0e0e0e;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --accent: #69ffe6;
+  --accent-soft: rgba(105, 255, 230, 0.12);
+  --accent-muted: rgba(105, 255, 230, 0.55);
+  --text: #f2f2f2;
+  --text-muted: rgba(255, 255, 255, 0.65);
+  --header-h: 72px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --max-w: 1100px;
+  --section-py: clamp(72px, 10vw, 120px);
+  --section-px: clamp(20px, 5vw, 60px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-base);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.section-container {
+  scroll-margin-top: var(--header-h);
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  color: var(--text);
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 48px);
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

@@ -1,409 +1,157 @@
-.sobremim{
-    width: 100%;
-    height: 840px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 120px;
-    padding-bottom: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    z-index: 0;
+.sobremim {
+  padding: var(--section-py) var(--section-px);
+  background: var(--bg-base);
 }
-.cont-sobre{
-width: 890px;
-height: 500px;
-border: 1px rgba(255, 255, 255, 0.178) solid;
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 25px;
-padding-top: 40px;
-padding-bottom: 40px;
-padding-left: 40px;
-padding-right: 40px;
-background-color: rgba(8, 8, 8, 0.952);
-position: relative;
-z-index: 0;
-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+.sobremim .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 40px);
+  max-width: var(--max-w);
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
-.cont-sobre h2{
-    font-family: "poppins";
-    font-size: 27px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 10px;
-    text-align: center;
+
+.sobremim .habi {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
 }
+
+.sobremim .habi img {
+  width: 32px;
+  transform: rotate(-45deg);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sobremim .habi img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: rotate(-45deg) scale(1.08);
+}
+
+.cont-sobre {
+  flex: 1 1 480px;
+  max-width: 680px;
+  padding: clamp(28px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cont-sobre h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.cont-sobre h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
 .texto-sobre {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cont-sobre p {
+  font-family: "Inter Tight", sans-serif;
+  font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+  line-height: 1.75;
+  font-weight: 300;
+  color: var(--text-muted);
+  text-align: justify;
+}
+
+.formacao {
+  flex: 0 1 300px;
+  min-width: 260px;
+  padding: clamp(24px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title-forma h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.title-forma hr {
+  border: none;
+  border-top: 2px solid var(--accent);
+  width: 60px;
+  margin: 10px auto 0;
+  opacity: 0.7;
+}
+
+.formacao-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.formacao-list li {
+  font-family: "Inter Tight", sans-serif;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent-soft);
+  position: relative;
+}
+
+.formacao-list li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  .sobremim .habi {
+    display: none;
+  }
+
+  .sobremim .container {
     flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-height: 250px;
-    overflow-y: auto;
-    padding-right: 10px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(105, 255, 230, 0.5) transparent;
+    align-items: stretch;
+  }
+
+  .cont-sobre,
+  .formacao {
+    flex: 1 1 auto;
+    max-width: 100%;
+    min-width: unset;
+  }
 }
 
-.texto-sobre::-webkit-scrollbar {
-    width: 6px;
+@media (max-width: 768px) {
+  .cont-sobre p {
+    text-align: left;
+  }
 }
-
-.texto-sobre::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.texto-sobre::-webkit-scrollbar-thumb {
-    background-color: rgba(105, 255, 230, 0.5);
-    border-radius: 3px;
-}
-
-.texto-sobre::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(105, 255, 230, 0.7);
-}
-
-.cont-sobre p{
-     font-family: "Inter Tight", sans-serif;
-     letter-spacing: 0.5px;
-     font-size: 15px;
-     line-height: 1.8;
-     font-weight: 300;
-     color: rgba(255, 255, 255, 0.9);
-     text-align: justify;
-     margin: 0;
-     padding: 0;
-}
-
-.reveal-texto {
-     opacity: 1;
-}
-.container{
-    display: flex;
-    align-items: center;
-}
-.formacao{
-    border-bottom: 1px white solid;
-      border-top: 1px white solid;
-        border-right: 1px white solid;
-width: 350px;
-height: 350px;
-display: flex;
-flex-direction: column;
-gap: 15px;
-padding-top: 25px;
-padding-bottom: 25px;
-padding-right: 15px;
-padding-left: 15px;
-border: 1px rgba(255, 255, 255, 0.178) solid;
-background-color: rgba(17, 17, 17, 0.425);
-border-radius: 15px;
-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-.title-forma{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.formacao h3{
-    text-align: center;
-    font-family: "poppins";
-    font-weight: 600;
-    font-size: 20px;
-    color: white;
-    margin-bottom: 5px;
-}
-.formacao hr{
-border:  1px rgb(0, 255, 242) solid;
-width: 80%;
-
-}
-ul{
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 10px;
-    padding: 0;
-    list-style: none;
-}
-ol{
-     font-family: "Inter Tight", sans-serif;
-     color: rgba(255, 255, 255, 0.85);
-     font-size: 17px;
-     font-weight: 400;
-     letter-spacing: 0.5px;
-     line-height: 1.6;
-     position: relative;
-     left: 20px;
-     width: 85%;
-     margin: 0;
-     padding: 0;
-}
-.habi{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    position: relative;
-    left: 10px;
-}
-.habi img{
-    width: 34px;
-    cursor: pointer;
-    transform: rotate(-45deg); 
-     filter: grayscale(100%);
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.habi img:hover{
-    width: 34px;
-    cursor: pointer;
-   filter: grayscale(0%);
-   box-shadow: 2px 5px 15px rgb(10, 90, 143);
-   transform: rotate(-45deg) scale(1.1);
-
-}
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .sobremim {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: auto;
-        min-height: 850px;
-        padding-top: 80px;
-        padding-bottom: 60px;
-    }
-
-    .container {
-        flex-direction: row;
-        gap: 25px;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .habi {
-        display: none;
-    }
-
-    .cont-sobre {
-        width: 60%;
-        max-width: 550px;
-        min-width: 400px;
-        height: auto;
-        min-height: 450px;
-        padding: 30px 25px;
-        gap: 18px;
-        flex: 1;
-    }
-
-    .cont-sobre h2 {
-        font-size: 22px;
-        margin-bottom: 5px;
-    }
-
-    .texto-sobre {
-        gap: 16px;
-        max-height: 280px;
-    }
-
-    .cont-sobre p {
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .formacao {
-        width: 35%;
-        max-width: 320px;
-        min-width: 280px;
-        height: auto;
-        min-height: 450px;
-        padding: 25px 18px;
-        gap: 15px;
-        flex: 0 0 auto;
-    }
-
-    .formacao h3 {
-        font-size: 18px;
-    }
-
-    ol {
-        font-size: 14px;
-        left: 12px;
-        line-height: 1.5;
-    }
-}
-
-/* HD 1366x765 */
-@media (min-width: 1025px) and (max-width: 1366px) {
-    .sobremim {
-        padding-left: 40px;
-        padding-right: 40px;
-        height: 920px;
-        padding-top: 100px;
-    }
-
-    .cont-sobre {
-        width: 800px;
-        height: 480px;
-        padding: 35px;
-        gap: 22px;
-    }
-
-    .cont-sobre h2 {
-        font-size: 26px;
-    }
-
-    .texto-sobre {
-        gap: 18px;
-        max-height: 240px;
-    }
-
-    .cont-sobre p {
-        font-size: 15px;
-        line-height: 1.7;
-    }
-
-    .formacao {
-        width: 320px;
-        height: 360px;
-        padding: 22px 15px;
-        gap: 14px;
-    }
-
-    .formacao h3 {
-        font-size: 19px;
-    }
-
-    ol {
-        font-size: 16px;
-        left: 18px;
-        line-height: 1.6;
-    }
-}
-
-/* Desktop 1920x1080 e acima */
-@media (min-width: 1920px) {
-    .sobremim {
-        padding-left: 60px;
-        padding-right: 60px;
-        height: auto;
-        min-height: 700px;
-        padding-top: 80px;
-    }
-
-    .cont-sobre {
-        width: 100%;
-        max-width: 900px;
-        height: auto;
-        min-height: 450px;
-        padding: 35px 40px;
-        gap: 20px;
-    }
-
-    .cont-sobre h2 {
-        font-size: 24px;
-    }
-
-    .texto-sobre {
-        gap: 18px;
-        max-height: none;
-    }
-
-    .cont-sobre p {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    .formacao {
-        width: 340px;
-        height: 340px;
-        padding: 25px 18px;
-        gap: 15px;
-    }
-
-    .formacao h3 {
-        font-size: 20px;
-    }
-
-    ol {
-        font-size: 15px;
-        left: 18px;
-        line-height: 1.5;
-    }
-
-    .habi img {
-        width: 30px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px){
-    .habi{
-        display: none;
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .cont-sobre{
-        width: 95%;
-        max-width: 100%;
-        height: auto;
-        min-height: 400px;
-        padding: 25px 18px;
-        gap: 18px;
-    }
-    .cont-sobre h2{
-        font-size: 22px;
-    }
-
-    .texto-sobre {
-        gap: 14px;
-        max-height: 180px;
-        padding-right: 8px;
-    }
-
-    .cont-sobre p {
-        font-size: 13px;
-        text-align: justify;      
-        line-height: 1.6;         
-        word-break: break-word;  
-        hyphens: auto;            
-    }       
-
-    .formacao{
-        margin-top: 25px;
-        width: 95%;
-        max-width: 100%;
-        height: auto;
-        min-height: 280px;
-        padding: 18px 15px;
-        gap: 12px;
-    }
-
-    .formacao h3 {
-        font-size: 18px;
-    }
-
-    ol {
-        font-size: 15px;
-        left: 10px;
-        width: 90%;
-        line-height: 1.6;
-    }
-
-    .sobremim{
-         height: auto;
-         min-height: auto;
-         padding: 50px 15px;
-         padding-top: 60px;
-         padding-bottom: 60px;
-    }
-    
-}
-

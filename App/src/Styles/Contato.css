@@ -1,458 +1,100 @@
-.Contato{
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 100px;
-    padding-bottom: 60px;
-    min-height: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contato-section {
+  padding: var(--section-py) var(--section-px);
+  background: var(--bg-elevated);
 }
 
-.Contato-geral{
-    width: 900px;
-    max-width: 100%;
-    min-height: 600px;
-    background-color: rgba(8, 8, 8, 0.952);
-    border: 1px rgba(255, 255, 255, 0.267) solid;
-    border-radius: 15px;
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
+.contato-card {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 48px);
+  display: flex;
+  gap: clamp(24px, 4vw, 40px);
+  align-items: flex-start;
 }
 
-.left-conta{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 45%;
-    flex: 1;
+.contato-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.Contato-geral h3{
-    font-family: "poppins";
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 10px;
+.contato-col h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
-.control ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.contato-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.control li{
-    font-family: "Inter Tight", sans-serif;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 18px;
-    font-weight: 300;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-    background: rgba(68, 68, 68, 0.15);
-    border-radius: 8px;
-    border-left: 3px solid rgba(105, 255, 230, 0.5);
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    cursor: pointer;
-    user-select: none;
+.contato-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-muted);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  user-select: none;
 }
 
-.control li:hover {
-    background: rgba(68, 68, 68, 0.25);
-    border-left-color: rgb(105, 255, 230);
-    transform: translateX(5px);
+.contato-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-left-color: var(--accent);
+  transform: translateX(4px);
 }
 
-.control li svg {
-    color: rgb(105, 255, 230);
-    font-size: 20px;
-    flex-shrink: 0;
+.contato-list li svg {
+  color: var(--accent);
+  font-size: 1.125rem;
+  flex-shrink: 0;
 }
 
-.control li span {
-    flex: 1;
+.contato-list li span,
+.contato-list li img + span {
+  font-family: "Inter Tight", sans-serif;
+  font-size: clamp(0.8125rem, 1.5vw, 1rem);
+  color: var(--text-muted);
+  flex: 1;
+  word-break: break-word;
 }
 
-.coluna {
-    width: 2px;
-    height: 90%;
-    background: linear-gradient(to bottom, transparent, rgba(105, 255, 230, 0.5), transparent);
-    border-radius: 2px;
-    align-self: center;
-    flex-shrink: 0;
+.contato-list li img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  pointer-events: none;
 }
 
-.right-conta{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 45%;
-    flex: 1;
+.contato-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--accent-muted), transparent);
+  align-self: stretch;
+  flex-shrink: 0;
 }
 
-#dft {
-    font-family: "poppins";
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 10px;
-}
-
-.cont-social ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.cont-social ul li{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: "poppins";
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 12px;
-    background: rgba(68, 68, 68, 0.15);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    user-select: none;
-}
-
-.cont-social ul li:hover {
-    background: rgba(68, 68, 68, 0.25);
-    transform: translateX(5px);
-}
-
-.cont-social ul li img {
-    width: 40px;
-    height: 40px;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    flex-shrink: 0;
-    pointer-events: none;
-}
-
-.cont-social ul li span {
-    flex: 1;
-}
-
-.cont-social ul li:hover img{
-    filter: brightness(1.1);
-    transform: scale(1.1);
-}
-footer{
-    text-align: center;
-    width: 100%;
-    padding: 25px;
-    background-color: black;
-    font-family: "poppins";
-
-}
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .Contato {
-    padding-left: 30px;
-    padding-right: 30px;
-    min-height: 800px;
-  }
-
-  .Contato-geral {
-    width: 90%;
-    max-width: 750px;
-    min-height: 550px;
-    padding: 40px 30px;
-    gap: 30px;
-  }
-
-  .left-conta {
-    gap: 20px;
-    width: 48%;
-  }
-
-  .right-conta {
-    gap: 20px;
-    width: 48%;
-  }
-
-  .Contato-geral h3 {
-    font-size: 22px;
-  }
-
-  #dft {
-    font-size: 22px;
-  }
-
-  .control ul {
-    gap: 18px;
-  }
-
-  .control li {
-    font-size: 17px;
-    padding: 10px;
-  }
-
-  .control li svg {
-    font-size: 18px;
-  }
-
-  .cont-social ul {
-    gap: 18px;
-  }
-
-  .cont-social ul li {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .cont-social ul li img {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-/* HD 1366x765 */
-@media (min-width: 1025px) and (max-width: 1366px) {
-  .Contato {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 90px;
-    min-height: 850px;
-  }
-
-  .Contato-geral {
-    width: 90%;
-    max-width: 850px;
-    min-height: 580px;
-    padding: 45px 35px;
-    gap: 35px;
-  }
-
-  .left-conta {
-    gap: 22px;
-    width: 48%;
-  }
-
-  .right-conta {
-    gap: 22px;
-    width: 48%;
-  }
-
-  .Contato-geral h3 {
-    font-size: 23px;
-  }
-
-  #dft {
-    font-size: 23px;
-  }
-
-  .control ul {
-    gap: 18px;
-  }
-
-  .control li {
-    font-size: 17px;
-    padding: 11px;
-  }
-
-  .control li svg {
-    font-size: 19px;
-  }
-
-  .cont-social ul {
-    gap: 18px;
-  }
-
-  .cont-social ul li {
-    font-size: 17px;
-    padding: 11px;
-  }
-
-  .cont-social ul li img {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-/* Desktop 1920x1080 e acima */
-@media (min-width: 1920px) {
-  .Contato {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 80px;
-    min-height: 750px;
-  }
-
-  .Contato-geral {
-    width: 100%;
-    max-width: 1100px;
-    min-height: 580px;
-    padding: 40px 50px;
-    gap: 40px;
-  }
-
-  .left-conta {
-    gap: 20px;
-    width: 45%;
-  }
-
-  .right-conta {
-    gap: 20px;
-    width: 45%;
-  }
-
-  .Contato-geral h3 {
-    font-size: 24px;
-  }
-
-  #dft {
-    font-size: 24px;
-  }
-
-  .control ul {
-    gap: 18px;
-  }
-
-  .control li {
-    font-size: 17px;
-    padding: 10px;
-  }
-
-  .control li svg {
-    font-size: 18px;
-  }
-
-  .cont-social ul {
-    gap: 18px;
-  }
-
-  .cont-social ul li {
-    font-size: 16px;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .cont-social ul li img {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-/* Mobile */
 @media (max-width: 768px) {
-  .Contato {
-    padding: 60px 15px;
-    padding-top: 80px;
-    min-height: auto;
-    margin-top: 40px;
-  }
-
-  .Contato-geral {
-    width: 95%;
-    max-width: 100%;
+  .contato-card {
     flex-direction: column;
-    gap: 20px;
-    padding: 25px 18px;
-    min-height: auto;
   }
 
-  .left-conta {
+  .contato-divider {
     width: 100%;
-    gap: 20px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent-muted), transparent);
   }
 
-  .right-conta {
-    width: 100%;
-    gap: 20px;
-  }
-
-  .coluna {
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, transparent, rgba(105, 255, 230, 0.5), transparent);
-    margin: 15px 0;
-  }
-
-  .Contato-geral h3 {
-    font-size: 20px;
+  .contato-col h3 {
     text-align: center;
-    margin-bottom: 15px;
-  }
-
-  #dft {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .control ul {
-    gap: 12px;
-    width: 100%;
-  }
-
-  .control li {
-    font-size: 13px;
-    padding: 12px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    gap: 10px;
-  }
-
-  .control li span {
-    display: inline-block;
-    word-break: break-word;
-    line-height: 1.5;
-    font-size: 12px;
-  }
-
-  .control li svg {
-    font-size: 14px;
-    flex-shrink: 0;
-  }
-
-  .cont-social ul {
-    gap: 12px;
-    width: 100%;
-  }
-
-  .cont-social ul li {
-    font-size: 13px;
-    padding: 12px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 10px;
-  }
-
-  .cont-social ul li span {
-    word-break: break-word;
-    font-size: 12px;
-  }
-
-  .cont-social ul li img {
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-  }
-
-  footer {
-    padding: 20px;
-    font-size: 14px;
   }
 }
