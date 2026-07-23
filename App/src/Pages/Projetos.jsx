@@ -1,7 +1,8 @@
 import "../Styles/Projetos.css";
 import mack from "../imgs/habilidades/mack.png";
 import agrojonner from "../imgs/habilidades/agrojonner.png";
-import trevo from "../imgs/habilidades/trevo.png";
+import stockAvera from "../imgs/habilidades/stockavera.png";
+import stockAveraApp from "../imgs/habilidades/stockavera-app.png";
 import koch from "../imgs/habilidades/koch.png";
 import alerta from "../imgs/alerta.png";
 import ScrollReveal from "scrollreveal";
@@ -17,10 +18,17 @@ const projetos = [
   },
   {
     id: "pro2",
-    titulo: "TREVO BANK",
-    img: trevo,
-    mobile: true,
-    tags: ["React Js", "JavaScript", "CSS", "Figma"],
+    titulo: "STOCK AVERA INSTITUCIONAL",
+    img: stockAvera,
+    url: "https://stockavera.com.br",
+    tags: ["React Js", "TypeScript", "Tailwind CSS", "Figma"],
+  },
+  {
+    id: "pro5",
+    titulo: "STOCK AVERA",
+    img: stockAveraApp,
+    url: "https://app.stockavera.com.br/",
+    tags: ["React Js", "TypeScript", "Express", "MySQL", "Tailwind CSS"],
   },
   {
     id: "pro3",
